@@ -1,0 +1,12 @@
+{
+  "name": "travis-up",
+  "version": "0.0.7",
+  "bin": {
+    "travis-up": "bin/bootstrap.sh"
+  },
+  "scripts": {
+    "postinstall": "sh bin/bootstrap.sh"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/unshift/travis-up"
+}
