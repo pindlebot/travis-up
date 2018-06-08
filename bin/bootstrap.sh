@@ -2,4 +2,4 @@
 dir=$(dirname $(dirname $PWD))
 curl -sfo "$dir/install.sh" https://up.apex.sh/install
 sh "$dir/install.sh" -b "$dir/bin"
-./bin/up version
+"$dir/bin/up" version
