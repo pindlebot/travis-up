@@ -2,6 +2,13 @@
 
 Install [Apex up](https://github.com/apex/up) on travis.
 
+Don't forget to set AWS environmental variables!
+
+```bash
+travis env set AWS_ACCESS_KEY_ID your_access_key_id
+travis env set AWS_SECRET_ACCESS_KEY your_secret_access_key
+```
+
 ```yml
 ...
 language: node_js
@@ -13,7 +20,7 @@ branches:
 install:
   - yarn --ignore-engines
 script:
-  - yarn global add travis-up # install up
+  - yarn add travis-up # installs up via postinstall script
 deploy:
   provider: script
   script: ./bin/up depoy production
